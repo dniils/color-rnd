@@ -1,0 +1,143 @@
+@import "https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: Courier Prime, monospace;
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.col h2 {
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 40px;
+  transition: background .25s ease-in-out;
+}
+
+.col h2:hover {
+  cursor: pointer;
+  background: #0000001a;
+}
+
+.col h3 {
+  font-size: 30px;
+}
+
+button {
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  font-size: 2rem;
+  transition: background .25s ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #0000001a;
+}
+
+.help {
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+
+.help__icon {
+  opacity: .5;
+  z-index: 99;
+  font-size: 30px;
+  transition: scale .15s ease-in-out;
+}
+
+.help__icon-bg {
+  width: 25px;
+  height: 25px;
+  z-index: -1;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: auto;
+  transition: background .15s ease-in-out;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.help__icon:hover {
+  opacity: 1;
+  scale: 1.1 !important;
+}
+
+.help__icon:hover ~ .help__icon-bg {
+  opacity: 1;
+  z-index: 98;
+}
+
+.help__icon:hover ~ .help__box, .help__icon:hover ~ .help__info {
+  opacity: 1;
+  z-index: 1;
+  scale: 1.02;
+}
+
+.help__icon:hover ~ .help__dark-bg {
+  opacity: .5;
+  visibility: visible;
+}
+
+.help__box {
+  opacity: 0;
+  color: #fff;
+  cursor: default;
+  background-color: #000;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 5px 20px;
+  transition: all .15s ease-in-out;
+}
+
+.help__info {
+  opacity: 0;
+  color: #fff;
+  cursor: default;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 10px;
+  transition: all .15s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.help__dark-bg {
+  width: 100%;
+  height: 10000px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #000;
+  margin: -10px;
+  transition: opacity .15s ease-in-out;
+  position: fixed;
+}
+
+/*# sourceMappingURL=index.b8d1660c.css.map */
